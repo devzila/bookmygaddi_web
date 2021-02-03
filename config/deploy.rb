@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.15.0"
 
-set :application, "bookmygaddi"
+set :application, "bookmygaddi_web"
 set :repo_url, "git@github.com:devzila/bookmygaddi_web.git"
 
 set :user,            'bookmygaddi'
