@@ -25,6 +25,7 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :default_shell, :bash
+set :linked_dirs, %w(tmp/pids tmp/sockets log)
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
