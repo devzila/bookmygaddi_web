@@ -53,3 +53,4 @@ production:
   database: bookmygaddi_production
   username: bookmygaddi_production
   password: kjh64fgr
+  socket: /var/run/mysqld/mysqld.sock
