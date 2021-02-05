@@ -10,6 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_02_05_120428) do
+
+  create_table "articles", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "parent_id"
+    t.string "title"
+    t.string "slug"
+    t.text "excerpt"
+    t.text "description"
+    t.string "ui_type"
+    t.string "hover_button_type"
+    t.string "thumbtype"
+    t.string "thumbmedia_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["parent_id"], name: "index_articles_on_parent_id"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
+  end
 
 end

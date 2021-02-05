@@ -1,0 +1,21 @@
+.well {	border-left:4px solid #ff418a;}
+.introtitle {background:#ff418a;}
+.blogbox a.metablog:hover,.blogbox a.metablog:focus {	color: #ff418a;}
+.readmore,.reply {color:#ff418a;}
+.captionicons {	background:#ff418a;}
+#filter ul li .selected {color: #ff418a !Important;}
+.popular .vuzz-button.buttonprice {	background: #ff418a;}
+.popular .vuzz-button {background:#ff418a;}
+.vuzz-pricing-table>div.popular {border-top:#ff418a 3px solid;}
+.popular .vuzz-pricing-cost {background:#ff418a;}
+.popular .vuzz-pricing-per {	background:#ff418a;}
+.progressdefault {background-color:#ff418a;}
+.defaultbutton {	background:#ff418a;}
+.testimonial-name {	color:#ff418a;}
+a.prev:hover,a.next:hover {background-color: #ff418a;}
+.colorme {color:#ff418a;}
+.pagination ul>li>a:hover,.pagination ul>li>a:focus,.pagination ul>.active>a,.pagination ul>.active>span {background:#ff418a;}
+blockquote {border-left:5px solid #ff418a;}
+.navbar-inverse .navbar-inner {border-bottom:#ff418a solid 10px;}
+.totop:hover {background:#ff418a;color:#fff;}
+::selection {background-color: #ff418a; color: #fff;}
