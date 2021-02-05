@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_02_05_073739) do
 
-  create_table "articles", charset: "utf8mb4", force: :cascade do |t|
+  create_table "articles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "category_id"
     t.string "title"
     t.string "slug"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_073739) do
     t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
-  create_table "categories", charset: "utf8mb4", force: :cascade do |t|
+  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.text "excerpt"
