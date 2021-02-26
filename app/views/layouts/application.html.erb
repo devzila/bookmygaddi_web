@@ -12,6 +12,9 @@
     <link href="/css/custom.css" rel="stylesheet">
     <link href="/css/skindefault.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
@@ -19,6 +22,9 @@
     <![endif]-->
     <!-- Jquery - The rest of the scripts at the bottom-->
     <script src="/js/jquery-1.9.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -28,16 +34,77 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+
+
   </head>
 
-  <body>
-    <%= yield %>
 
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/twitter-bootstrap-hover-dropdown.js"></script>
-    <script src="/js/common.js"></script>
-    <script src="/js/jquery.prettyPhoto.js"></script>
-    <script src="/js/jquery.isotope.min.js"></script>
+    <body style="padding-top: 30px;">
+    <header>
+    <h1 class="logo"><i><b>BookMyGaddi</b></i></h1>
+      <ul class="nav__links">
+        <li><a href="#"><b>Today</b></a></li>
+        <li><a href="#"><b style="color: black;">explore</b></a></li>
+        <li><a href="#"><b>opt1</b></a></li>
+        <li><a href="#"><b>opt2</b></a></li>
+        <li><a href="#"><b>opt3</b></a></li>
+        <li><a href="#"><b>opt4</b></a></li>
+        <li><a href="#"><b>opt5</b></a></li>
+        <li><a href="#"><b>opt6</b></a></li>
+        <li><a href="#"><b>opt7</b></a></li>
+        
+        
+      </ul>
+    
+  </header>
+        <%= yield %>
+
+    <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+     <footer style="background-color: #34282C;">
+         <div class="row my-5 justify-content-center py-5">
+             <div class="col-11">
+                 <div class="row">
+                     <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                         <h3 class="text-muted mb-md-0 mb-5 bold-text">BookMyGaddi</h3>
+                     </div>
+                     <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                         <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>MENU</b></h6>
+                         
+                             <p class="mb-1">Home</p>
+                             <p class="mb-1">About</p>
+                             <p class="mb-1">Blog</p>
+                             <p class="mb-1">Portfolio</p>
+                        
+                     </div>
+                     <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                         <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                         <p class="mb-1">SCO-90,sec-5,Panchkula</p>
+                         <p>Ansal Sampark</p>
+                     </div>
+                 </div>
+                 <div class="row ">
+                     <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                         <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> All Rights Reserved.</small>
+                     </div>
+                     <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                         <h6 class="mt-55 mt-2 text-muted bold-text"><b>Nilay Anand</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> info@devzila.com</small>
+                     </div>
+                     <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                         <h6 class="text-muted bold-text"><b>Priyanka Sharma</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> priyanka@devzila.com</small>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+    </div>
+
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/twitter-bootstrap-hover-dropdown.js"></script>
+        <script src="/js/common.js"></script>
+        <script src="/js/jquery.prettyPhoto.js"></script>
+        <script src="/js/jquery.isotope.min.js"></script>
 
   </body>
 </html>

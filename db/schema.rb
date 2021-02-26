@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_120428) do
+ActiveRecord::Schema.define(version: 2021_02_25_094759) do
 
   create_table "articles", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "parent_id"
@@ -22,10 +22,23 @@ ActiveRecord::Schema.define(version: 2021_02_05_120428) do
     t.string "hover_button_type"
     t.string "thumbtype"
     t.string "thumbmedia_url"
+    t.string "contact"
+    t.string "phone", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["parent_id"], name: "index_articles_on_parent_id"
     t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
+  create_table "media_tables", charset: "utf8mb4", force: :cascade do |t|
+    t.string "media_url"
+    t.string "media_type"
+    t.integer "sequence"
+    t.bigint "article_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_media_tables_on_article_id"
+  end
+
+  add_foreign_key "media_tables", "articles"
 end

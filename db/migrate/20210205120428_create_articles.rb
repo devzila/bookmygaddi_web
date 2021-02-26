@@ -10,6 +10,8 @@ class CreateArticles < ActiveRecord::Migration[6.1]
       t.string :hover_button_type
       t.string :thumbtype
       t.string :thumbmedia_url
+      t.string :contact
+      t.string :phone, null: false
 
       t.timestamps
     end
