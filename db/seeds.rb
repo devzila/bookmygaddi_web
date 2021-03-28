@@ -1,7 +1,97 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+contents = [
+    {
+      title: 'Intercity car',
+      slug: 'intercity-car',
+      excerpt: 'Personalised car for intercity travel',
+      content: 'Personalised car for intercity travel',
+      ui_type: 1,
+      hover_button_type: 1,
+      menu_visibility: true,
+      thumbmedia_url: "/img/category/intercity.jpg",
+    },
+    {
+        title: 'Local taxi',
+        slug: 'local-taxi',
+        excerpt: 'Personalised car for city movement',
+        content: 'Personalised car for city movement',
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: true,
+        thumbmedia_url: "/img/category/local-cab.jpg",
+    },
+    {
+        title: 'Bus',
+        slug: 'bus',
+        excerpt: 'Bus for your coustomize need',
+        content: 'Bus for your coustomize need',
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: true,
+        thumbmedia_url: "/img/category/bus.jpg",
+    },
+    {
+        title: 'Religious',
+        slug: 'religious-travel',
+        excerpt: 'Char Dhaam, Vaishno Davi etc...',
+        content: 'Char Dhaam, Vaishno Davi etc...',
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: true,
+        thumbmedia_url: "/img/category/kedarnath.jpg",
+    },
+    {
+        title: 'Trek',
+        slug: 'trek',
+        excerpt: 'Go awesome places for Trek',
+        content: 'Go awesome places for Trek',
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: true,
+        thumbmedia_url: "/img/category/trek.jpg",
+
+    },
+    {
+        title: 'Travel Spot',
+        slug: 'travel-spot',
+        excerpt: "Visit India's famous travel destination",
+        content: "Visit India's famous travel destination",
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: true,
+        thumbmedia_url: "/img/category/taaj.jpg",
+    },
+    {
+        title: 'Group Camping',
+        slug: 'group-camping',
+        excerpt: "Group camping",
+        content: "Group camping",
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: false,
+        thumbmedia_url: "/img/category/group-camp-vehicle.jpg",
+    },
+    {
+        title: 'Motor Home',
+        slug: 'motor-home',
+        excerpt: "Live to Travel",
+        content: "Live to Travel",
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: false,
+        thumbmedia_url: "/img/category/motor-home.jpg",
+    },
+    {
+        title: 'Off Road Vehicle',
+        slug: 'off-road-vehicle',
+        excerpt: "Discovery and Explore",
+        content: "Discovery and Explore with our rental vehicle",
+        ui_type: 1,
+        hover_button_type: 1,
+        menu_visibility: false,
+        thumbmedia_url: "/img/category/off-road-vehicle.jpg",
+    },
+]
+
+contents.each do |content|
+  Content.create(content)
+end
