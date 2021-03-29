@@ -2,7 +2,7 @@ contents = [
     {
       title: 'Intercity car',
       slug: 'intercity-car',
-      excerpt: 'Personalised car for intercity travel',
+      excerpt: 'Book one way taxi from Chandigarh to Delhi, Himachal, UP, Rajasthan at very low cost. Sanitized Cabs, Verified Driver, 24x7 Service, Safe at Night, GPS enabled, Great Amenities.',
       content: 'Personalised car for intercity travel',
       ui_type: 1,
       hover_button_type: 1,
@@ -12,7 +12,7 @@ contents = [
     {
         title: 'Local taxi',
         slug: 'local-taxi',
-        excerpt: 'Personalised car for city movement',
+        excerpt: 'Fast Bookings & Free Cancellations. Low Price Guarantee! Ultra-Fast Booking. Biggest Discounts. Cash and Debit Accepted. No Deposit Necessary. <br/><strong>Types:</strong> Economy, Standard, SUV, Luxury, Pickup, Van.',
         content: 'Personalised car for city movement',
         ui_type: 1,
         hover_button_type: 1,
@@ -92,6 +92,43 @@ contents = [
     },
 ]
 
+articles = {
+  intercity_car: [
+    {
+        title: 'Delhi to Chandigarh',
+        slug: 'delhi-to-chandigarh',
+        excerpt: 'Personalised cab to go to Chandigarh',
+        content: 'Personalised cab to go to Chandigarh',
+        ui_type: 1,
+        hover_button_type: 1,
+        thumbmedia_url: "/img/category/intercity.jpg",
+    },
+    {
+        title: 'Delhi to Agra',
+        slug: 'delhi-to-agra',
+        excerpt: 'Personalised cab to go to Agra',
+        content: 'Personalised cab to go to Agra',
+        ui_type: 1,
+        menu_visibility: true,
+        thumbmedia_url: "/img/category/local-cab.jpg",
+    },
+    {
+        title: 'Delhi to Jaipur',
+        slug: 'delhi-to-jaipur',
+        excerpt: 'Personalised cab to go to Agra',
+        content: 'Personalised cab to go to Agra',
+        ui_type: 1,
+        hover_button_type: 1,
+        thumbmedia_url: "/img/category/bus.jpg",
+    }
+  ]
+}
+
 contents.each do |content|
   Content.create(content)
+end
+
+articles.keys.each do |key|
+  category = Content.find_by(slug: key.to_s.gsub('_', '-'))
+  category.articles.create(articles[key])
 end

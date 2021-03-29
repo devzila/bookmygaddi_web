@@ -9,22 +9,22 @@
     <% @articles.each do |article| %>
       <div class="boxportfolio4 cat2 cat3">
         <div class="boxcontainer">
-          <a href="/<%=article.slug%>">
-            <img src="<%=article.thumbmedia_url%>" alt="">
-          </a>
+          <a href="/<%=@category.slug%>/hire/<%=article.slug%>"> <img src="<%=article.thumbmedia_url%>" alt=""></a>
           <div class="roll">
             <div class="wrapcaption">
-              <a href="/<%=article.slug%>"><i class="icon-link captionicons"></i></a>
+              <a href="/<%=@category.slug%>/hire/<%=article.slug%>"><i class="icon-link captionicons"></i></a>
               <a
                 data-gal="prettyPhoto[gallery1]"
-                href="/<%=article.slug%>"
+                href="/<%=@category.slug%>/hire/<%=article.slug%>"
                 title="<%=article.title%>">
                 <i class="icon-zoom-in captionicons"></i>
               </a>
             </div>
           </div>
-          <h1><a href="/<%=article.slug%>"><%=article.title%></a></h1>
-          <p><%=raw(article.excerpt)%></p>
+          <h1><a href="/<%=@category.slug%>/hire/<%=article.slug%>"><%=article.title%></a></h1>
+          <p>
+            <%=article.excerpt%>
+          </p>
         </div>
       </div>
     <% end %>

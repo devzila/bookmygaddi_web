@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'home#index'
+  resources :home, :path => '/', only: %i(index show) do
+    resources :articles, path: 'hire', only: %i(show)
+  end
 end
