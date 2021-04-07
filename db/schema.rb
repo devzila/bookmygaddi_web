@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_06_074354) do
+ActiveRecord::Schema.define(version: 2021_04_07_073114) do
 
   create_table "contents", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "parent_id"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 2021_02_06_074354) do
     t.index ["parent_id", "active"], name: "index_contents_on_parent_id_and_active"
     t.index ["parent_id"], name: "index_contents_on_parent_id"
     t.index ["slug"], name: "index_contents_on_slug", unique: true
+  end
+
+  create_table "forms", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "slug"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
