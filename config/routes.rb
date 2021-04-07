@@ -4,4 +4,9 @@ Rails.application.routes.draw do
     resources :articles, path: 'hire', only: %i(show)
   end
 
+  namespace :admin do
+    resources :categories
+  end
+
+
 end
