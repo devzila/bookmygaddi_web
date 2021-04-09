@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Slug</th>
+      <th></th>
+    </tr>
+    <%@sub_categories.each do |category| %>
+    <tr>
+      <td><%=category.title%></td>
+      <td><%=category.slug%></td>
+      <td><%=link_to "Edit", edit_admin_category_sub_category_path(category.id)%></td>
+    </tr>
+    <%end%>
+  </table>
+</div>

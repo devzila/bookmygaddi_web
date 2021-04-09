@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookmygaddiWeb Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="/js/jquery-1.9.0.min.js"></script>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <%= render "layouts/admin/header" %>
+    <%= yield %>
+    <%= render "layouts/admin/footer" %>
+
+    <script src="/js/bootstrap.js"></script>
+
+  </body>
+</html>

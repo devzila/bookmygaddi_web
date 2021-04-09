@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :categories
+    resources :categories do
+      resources :sub_categories, controller: 'category/sub_categories'
+    end
   end
 
 

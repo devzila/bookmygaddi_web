@@ -1,0 +1,28 @@
+<div class="container">
+  <h1><%=@category.title %></h1>
+
+  <div class="row">
+
+    <div class="span6">
+      <img class="img-fluid" src="<%=@category.thumbmedia_url%>" alt="">
+    </div>
+
+    <div class="span6">
+      <h3 class="my-3">Excerpt</h3>
+      <p><%=@category.excerpt%></p>
+      <h3 class="my-3">Details</h3>
+      <ul>
+        <li>Slug: <strong><%=@category.slug%></strong></li>
+        <li>Likes Count: <strong><%=@category.like_count%></strong></li>
+        <li>Comments Count: <strong><%=@category.comment_count%></strong></li>
+        <li>Active: <strong><%=@category.active%></strong></li>
+        <li>Visible in Top Nav: <strong><%=@category.menu_visibility%></strong></li>
+        <li>View Priority: <strong><%=@category.view_priority%></strong></li>
+        <li>Valid Till: <strong><%=@category.valid_till%></strong></li>
+        <li>Created: <strong><%=@category.created_at%></strong></li>
+        <li>Last Updated: <strong><%=@category.updated_at%></strong></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

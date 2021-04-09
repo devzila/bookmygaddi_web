@@ -1,13 +1,18 @@
 <div class="container">
-  <table border="1">
+  <a href="<%= new_admin_category_path %>"> <button class="btn">New Category</button></a>
+  <table class="table">
     <tr>
       <th>Name</th>
       <th>Slug</th>
+      <th></th>
+      <th></th>
     </tr>
     <%@categories.each do |category| %>
     <tr>
-      <td><%=category.title%></td>
+      <td><%= link_to category.title, admin_category_path(category) %></td>
       <td><%=category.slug%></td>
+      <td><%= link_to "Sub Categories", admin_category_sub_categories_path(category) %></td>
+      <td><%= link_to "Edit", edit_admin_category_path(category)%></td>
     </tr>
     <%end%>
   </table>
