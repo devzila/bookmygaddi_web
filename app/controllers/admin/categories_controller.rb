@@ -14,7 +14,12 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def create
+      @category.new({
+        title: params[:title],
+        slug: params[:slug]
+      })
 
+      redirect_to admin_category_path(@category.Content)
   end
 
   def edit
@@ -22,7 +27,12 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def update
+    @category.update({
+      title: params[:title],
+      slug: params[:slug]
+    })
 
+    redirect_to admin_category_path
   end
 
 
