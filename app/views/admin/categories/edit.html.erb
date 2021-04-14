@@ -2,7 +2,7 @@
 <h1>Edit</h1>
 </div>
 
-<%= form_with(model: @content, local: true,method: 'put', url: edit_admin_category_path) do |f| %>
+<%= form_with(model: @category, local: true,method: 'put', url: admin_category_path, action: 'edit') do |f| %>
 
     <p>
       <%= f.label :title %><br/>
@@ -17,6 +17,6 @@
     <p>
       <%= f.submit %>
     </p>
-  
+    <%= link_to 'Back', admin_categories_path %>
   <% end %> 
 </div>  
