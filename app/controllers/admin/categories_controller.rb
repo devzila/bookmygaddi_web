@@ -14,7 +14,7 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def create
-    @category = Content.new(params.require(:categories).permit(:title, :slug))
+    @category = Content.new(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url))
     @category.save
     redirect_to admin_categories_path
   end
@@ -26,7 +26,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def update
   @category = Content.find(params[:id])
-    if @category.update(params.require(:content).permit(:title, :slug))
+    if @category.update(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url))
       flash[:notice] = "Article was updated successfully."
       redirect_to admin_categories_path
 
