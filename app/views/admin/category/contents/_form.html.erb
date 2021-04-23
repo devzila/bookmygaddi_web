@@ -1,0 +1,39 @@
+<%= form_with model: [:admin, :content, @content] do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="form-group">
+    <%= f.label :excerpt %>
+    <%= f.text_area :excerpt %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ui_type %>
+    <%= f.text_field :ui_type %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hover_button_type %>
+    <%= f.text_field :hover_button_type %>
+  </div>
+  <div class="form-group">
+    <label class="checkbox" for="menu_visibility">
+      <%= f.check_box :menu_visibility %> Menu Visibility
+    </label>
+  </div>
+  <div class="form-group">
+    <%= f.label :thumbmedia_url %>
+    <%= f.text_field :thumbmedia_url %>
+  </div>
+  <div class="form-group">
+    <%= f.submit %>
+    <%= link_to 'Back', admin_contents_path %>
+  </div>
+<% end %>

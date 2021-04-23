@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :contents do
-      resources :sub_contents, controller: 'category/sub_contents'
+      resources :contents, controller: 'category/contents'
     end
   end
 

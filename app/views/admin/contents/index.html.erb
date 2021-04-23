@@ -11,7 +11,7 @@
     <tr>
       <td><%= link_to category.title, admin_content_path(category) %></td>
       <td><%=category.slug%></td>
-      <td><%= link_to "Sub Categories", admin_content_sub_contents_path(category) %></td>
+      <td><%= link_to "Sub Categories", admin_content_contents_path(category) %></td>
       <td><%= link_to "Edit", edit_admin_content_path(category)%></td>
     </tr>
     <%end%>

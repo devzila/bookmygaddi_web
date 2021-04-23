@@ -6,7 +6,6 @@ class Admin::ContentsController < Admin::BaseController
 
   def show
 
-
   end
 
   def new
