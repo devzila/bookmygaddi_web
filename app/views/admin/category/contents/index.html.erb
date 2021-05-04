@@ -8,7 +8,7 @@
     </tr>
     <%@sub_categories.each do |sub_category| %>
     <tr>
-      <td><%=sub_category.title%></td>
+      <td><%=link_to sub_category.title, admin_content_path(sub_category)%></td>
       <td><%=sub_category.slug%></td>
       <td><%=link_to "Edit", edit_admin_content_content_path(@category, sub_category)%></td>
     </tr>
