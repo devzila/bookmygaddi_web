@@ -5,6 +5,10 @@ class Admin::Category::ContentsController < Admin::BaseController
     @sub_categories = @category.articles
   end
 
+  def show
+
+  end
+
   def new
     @content = @category.articles.new
   end
