@@ -16,3 +16,7 @@ a:hover {
     color: rgba(57, 57, 57, 0.82);
     text-decoration: none;
 }
+
+.container {
+    margin-top: 55px;
+}
