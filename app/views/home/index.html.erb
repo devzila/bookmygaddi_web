@@ -2,7 +2,7 @@
   <div class="row" data-masonry='{"percentPosition": true }'>
     <% @articles.each do |article| %>
         <div class="col-sm-4 col-md-3 py-3">
-          <div class="card">
+          <div class="card bg-light">
             <div class="card-body">
               <a href="/<%=article.slug%>">
                 <img class="card-img-top" src="<%=article.thumbmedia_url%>">
