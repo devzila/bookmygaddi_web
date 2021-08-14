@@ -1,34 +1,19 @@
-<div class="container">
-  <!-- Filtering Menu
-  ================================================== -->
-  <!-- END filtering menu -->
-  <!-- MASONRY ITEMS START
-  ================================================== -->
-  <div id="content">
-
+<div class="container py-2">
+  <div class="row" data-masonry='{"percentPosition": true }'>
     <% @articles.each do |article| %>
-      <div class="boxportfolio4 cat2 cat3">
-        <div class="boxcontainer">
-          <a href="/<%=article.slug%>">
-            <img src="<%=article.thumbmedia_url%>" alt="">
-          </a>
-          <div class="roll">
-            <div class="wrapcaption">
-              <a href="/<%=article.slug%>"><i class="icon-link captionicons"></i></a>
-              <a
-                data-gal="prettyPhoto[gallery1]"
-                href="/<%=article.slug%>"
-                title="<%=article.title%>">
-                <i class="icon-zoom-in captionicons"></i>
+        <div class="col-sm-4 col-md-3 py-3">
+          <div class="card">
+            <div class="card-body">
+              <a href="/<%=article.slug%>">
+                <img class="card-img-top" src="<%=article.thumbmedia_url%>">
+                <div style="padding: 1rem 1rem">
+                  <h3><%=article.title%></h3>
+                  <p class="card-text"><%=raw(article.excerpt)%></p>
+                </div>
               </a>
             </div>
           </div>
-          <h1><a href="/<%=article.slug%>"><%=article.title%></a></h1>
-          <p><%=raw(article.excerpt)%></p>
         </div>
-      </div>
     <% end %>
-
-
   </div>
 </div>
