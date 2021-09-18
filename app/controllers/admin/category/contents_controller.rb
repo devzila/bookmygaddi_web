@@ -32,7 +32,6 @@ class Admin::Category::ContentsController < Admin::BaseController
     end
   end
 
-
   private
   def set_category
     @category = Content.find(params[:content_id])
