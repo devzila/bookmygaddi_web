@@ -16,7 +16,7 @@ default: &default
   username: priyanka
   password: root1234
   socket: <%= Rails.application.secrets.db_socket %>
-
+  
 development:
   <<: *default
   database: bookmygaddi_web_development
