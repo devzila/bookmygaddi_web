@@ -14,9 +14,9 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: root
+  password: root1234
   socket: <%= Rails.application.secrets.db_socket %>
-
+  
 development:
   <<: *default
   database: bookmygaddi_web_development

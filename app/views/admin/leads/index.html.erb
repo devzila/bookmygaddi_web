@@ -1,0 +1,25 @@
+<div class="container">
+<button class="btn"><%= link_to "New Leads", new_admin_lead_path%></td></button></a>
+<table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Source</th>
+      <th>Phone Number</th>
+      <th>Article</th>
+      <th>Form Name</th>
+    </tr>
+    <%@leads.each do |lead| %>
+    <tr>
+      <td><%=link_to lead.name, admin_lead_path(lead)%></td>
+      <td><%=lead.email%></td>
+      <td><%=lead.source%></td>
+      <td><%=lead.phone_number%></td>
+      <td><%=lead.article%></td>
+      <td><%=lead.form_name%></td>
+      <td><%=link_to "Edit", edit_admin_lead_path(lead)%></td>
+      <td><%=link_to "Delete", admin_lead_path(lead), method: :delete%></td>
+    </tr>
+    <%end%>
+  </table>
+</div>

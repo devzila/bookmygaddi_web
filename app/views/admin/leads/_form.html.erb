@@ -1,0 +1,62 @@
+<%= form_with model: [:admin, @lead] do |f| %>
+  <div class="row g-5 align-items-center">
+    <div class="w-50 p-4">
+      <strong><%= f.label :name, { class: "form-label"} %></strong>
+      <%= f.text_field :name, { class: "form-control", placeholder: "Name" } %>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-50 p-4">
+      <strong><%= f.label :email, { class: "form-label"} %></strong>
+      <%= f.text_field :email, { class: "form-control", placeholder: "Email" } %>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-25 p-4">
+      <strong><%= f.label :phone_number, { class: "form-label"} %></strong>
+      <%= f.text_field :phone_number, { class: "form-control", placeholder: "phone_number" } %>
+    </div>
+
+    <div class="w-25 p-4">
+      <strong><%= f.label :form_name, { class: "form-label"} %></strong>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Form Name</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-25 p-4">
+      <strong><%= f.label :source, { class: "form-label"} %></strong>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Source</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+
+    <div class="w-25 p-4">
+      <strong><%= f.label :article, { class: "form-label"} %></strong>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Article</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-10 p-4">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+    <%= link_to 'Back', admin_contents_path %>
+    </div>
+  </div>
+
+<% end %>

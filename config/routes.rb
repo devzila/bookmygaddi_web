@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :contents do
       resources :contents, controller: 'category/contents'
     end
+
+    resources :leads
+    root to: 'leads#index'
   end
 
 

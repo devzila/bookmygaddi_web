@@ -26,14 +26,11 @@ class Admin::Category::ContentsController < Admin::BaseController
   end
 
   def update
-    @category.update({
-      title: params[:title],
-      slug: params[:slug]
-    })
-
-    redirect_to admin_category_sub_categories_path
+    if @category.update(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url))
+      flash[:notice] = "Sub Category was updated successfully."
+      redirect_to admin_content_contents_path
+    end
   end
-
 
   private
   def set_category
