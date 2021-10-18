@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
 
     resources :leads
-    root to: 'leads#index'
+    resources :forms
   end
 
 
