@@ -1,0 +1,23 @@
+<%= form_with model: [:admin, @form] do |f| %>
+  <div class="row g-5 align-items-center">
+    <div class="w-50 p-4">
+      <strong><%= f.label :slug, { class: "form-label"} %></strong>
+      <%= f.text_field :slug, { class: "form-control", placeholder: "Slug" } %>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-50 p-4">
+      <strong><%= f.label :Content, { class: "form-label"} %></strong>
+      <%= f.text_field :content, { class: "form-control", placeholder: "Content" } %>
+    </div>
+  </div>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-10 p-4">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+    <%= link_to 'Back', admin_contents_path %>
+    </div>
+  </div>
+
+<% end %>
