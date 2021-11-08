@@ -1,39 +1,61 @@
 <%= form_with model: [:admin, :content, @content] do |f| %>
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  
+  <div class="row g-5 align-items-center">
+    <div class="w-25 p-4">
+      <strong><%= f.label :title, { class: "form-label"} %></strong>
+      <%= f.text_field :title, { class: "form-control", placeholder: "Title" } %>
+    </div>
+
+    <div class="w-25 p-4">
+      <strong><%= f.label :slug, { class: "form-label"} %></strong>
+      <%= f.text_field :slug, { class: "form-control", placeholder: "Slug" } %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-25 p-4">
+      <strong><%= f.label :excerpt, { class: "form-label"} %></strong>
+      <%= f.text_field :excerpt, { class: "form-control", placeholder: "Excerpt" } %>
+    </div>
+
+    <div class="w-25 p-4">
+      <strong><%= f.label :content, { class: "form-label"} %></strong>
+      <%= f.text_field :content, { class: "form-control", placeholder: "Content" } %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :excerpt %>
-    <%= f.text_area :excerpt %>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-25 p-4">
+      <strong><%= f.label :ui_type, { class: "form-label"} %></strong>
+      <%= f.text_field :ui_type, { class: "form-control", placeholder: "UI Type" } %>
+    </div>
+
+    <div class="w-25 p-4">
+      <strong><%= f.label :hover_button_type, { class: "form-label"} %></strong>
+      <%= f.text_field :hover_button_type, { class: "form-control", placeholder: "" } %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+
+  <div class="row g-5 align-items-center">
+    <div class="w-25 p-4">
+      <strong><%= f.label :thumbmedia_url, { class: "form-label"} %></strong>
+      <%= f.text_field :thumbmedia_url, { class: "form-control", placeholder: "" } %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :ui_type %>
-    <%= f.text_field :ui_type %>
-  </div>
-  <div class="form-group">
-    <%= f.label :hover_button_type %>
-    <%= f.text_field :hover_button_type %>
-  </div>
-  <div class="form-group">
-    <label class="checkbox" for="menu_visibility">
-      <%= f.check_box :menu_visibility %> Menu Visibility
+   
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+    <label class="form-check-label" for="flexCheckIndeterminate">
+      Menu Visibility
     </label>
   </div>
-  <div class="form-group">
-    <%= f.label :thumbmedia_url %>
-    <%= f.text_field :thumbmedia_url %>
-  </div>
-  <div class="form-group">
-    <%= f.submit %>
-    <%= link_to 'Back', admin_contents_path %>
+    
+
+  <div class="row g-5 align-items-center">
+    <div class="w-10 p-4">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+      <%= link_to 'Back', admin_contents_path %>
+    </div>
   </div>
 <% end %>
