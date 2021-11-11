@@ -1,5 +1,6 @@
 class FormsController < ApplicationController
     before_action :set_forms, only: %i(show update destroy)
+    skip_before_action :verify_authenticity_token
 
     def index
         @forms = Form.all

@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     resources :forms
   end
 
+  namespace :api do
+    resources :leads, controller: 'leads', only: :create
+  end
 end
