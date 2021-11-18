@@ -14,12 +14,14 @@
   <div class="row g-5 align-items-center">
     <div class="w-25 p-4">
       <strong><%= f.label :excerpt, { class: "form-label"} %></strong>
-      <%= f.text_field :excerpt, { class: "form-control", placeholder: "Excerpt" } %>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">
+      <%= f.text_field :excerpt, { class: "form-control", placeholder: "Excerpt" } %></textarea>
     </div>
 
     <div class="w-25 p-4">
       <strong><%= f.label :content, { class: "form-label"} %></strong>
-      <%= f.text_field :content, { class: "form-control", placeholder: "Content" } %>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">
+      <%= f.text_field :content, { class: "form-control", placeholder: "Content" } %></textarea>
     </div>
   </div>
 
