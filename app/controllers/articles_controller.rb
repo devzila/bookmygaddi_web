@@ -5,6 +5,14 @@ class ArticlesController < ApplicationController
 
   end
 
+  def get_page_meta
+    {
+        title: @article.title,
+        desc: @article.excerpt,
+        image: "http://bookmygaddin.in#{@article.thumbmedia_url}"
+    }
+  end
+
   private
 
   def set_article

@@ -10,6 +10,14 @@ class HomeController < ApplicationController
     @articles = @category.articles
   end
 
+  def get_page_meta
+    {
+        title: @category.title,
+        desc: @category.excerpt,
+        image: "http://bookmygaddin.in#{@category.thumbmedia_url}"
+    }
+  end
+
   private
 
   def set_category
