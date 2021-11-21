@@ -11,11 +11,16 @@ class HomeController < ApplicationController
   end
 
   def get_page_meta
-    {
-        title: @category.title,
-        desc: @category.excerpt,
-        image: "http://bookmygaddin.in#{@category.thumbmedia_url}"
-    }
+    if params[:action] == 'show'
+      {
+          title: @category.title,
+          desc: @category.excerpt,
+          image: "http://bookmygaddin.in#{@category.thumbmedia_url}"
+      }
+    else
+      super
+    end
+
   end
 
   private
