@@ -1,4 +1,9 @@
-<%= form_with model: [:admin, :content, @content] do |f| %>
+<% flash.each do |type, msg| %>
+    <div class="alert alert-danger" role="alert">
+      <%= msg %>
+    </div>
+<% end %>
+<%= form_with  model: [:admin, @category, @content] do |f| %>
     <div class="row g-5 align-items-center">
       <div class="col">
         <strong><%= f.label :title, { class: "form-label"} %></strong>
@@ -75,7 +80,23 @@
       </div>
     </div>
 
+    <br/>
+    <div class="row g-5 align-items-center">
+      <div class="col">
+        <strong><%= f.label "Related Artile", { class: "form-label"} %></strong>
+        <%= f.collection_select(
+                :related_content_ids,
+                @available_contents,
+                :id,
+                :title,
+                { selected: @selected_content, include_hidden: false },
+                { :multiple => true, :size => 14, class: "form-control" }
+            )
+        %>
+      </div>
+    </div>
 
+    <br/>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
       <label class="form-check-label" for="flexCheckIndeterminate">
@@ -87,11 +108,10 @@
     <div class="row g-5 align-items-center">
       <div class="w-10 p-4">
         <%= f.submit "Submit", class: "btn btn-primary" %>
-        <%= link_to 'Back', admin_content_contents_path(@content.category) %>
+        <%= link_to 'Back', admin_content_contents_path(@category) %>
       </div>
     </div>
 
 <% end %>
-
-  </div>
-</div>          
+</div>
+</div>
