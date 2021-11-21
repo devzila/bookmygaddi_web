@@ -14,9 +14,22 @@ class Admin::Category::ContentsController < Admin::BaseController
   end
 
   def create
-    @content = @category.articles.new(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url, :custom_meta_tag, :meta_tag_description))
+    @content = @category.articles.new(params.require(:content).permit(
+        :title,
+        :slug,
+        :excerpt,
+        :content,
+        :ui_type,
+        :hover_button_type,
+        :menu_visibility,
+        :thumbmedia_url,
+        :custom_meta_tag,
+        :meta_tag_description,
+        :tag_list
+    ))
+
     @content.save
-    redirect_to admin_content_contents_path
+    redirect_to admin_content_contents_path(@content.category)
 
   end
 
@@ -26,9 +39,22 @@ class Admin::Category::ContentsController < Admin::BaseController
   end
 
   def update
-    if @category.update(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url, :custom_meta_tag, :meta_tag_description))
+    if @category.update(params.require(:content).permit(
+        :title,
+        :slug,
+        :excerpt,
+        :content,
+        :ui_type,
+        :hover_button_type,
+        :menu_visibility,
+        :thumbmedia_url,
+        :custom_meta_tag,
+        :meta_tag_description,
+        :tag_list
+    ))
+
       flash[:notice] = "Sub Category was updated successfully."
-      redirect_to admin_content_contents_path
+      redirect_to admin_content_contents_path(@category.category)
     end
   end
 
