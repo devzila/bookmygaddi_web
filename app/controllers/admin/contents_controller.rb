@@ -13,7 +13,19 @@ class Admin::ContentsController < Admin::BaseController
   end
 
   def create
-    @content = Content.new(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url, :custom_meta_tag, :meta_tag_description))
+    @content = Content.new(params.require(:content).permit(
+        :title,
+        :slug,
+        :excerpt,
+        :content,
+        :ui_type,
+        :hover_button_type,
+        :menu_visibility,
+        :thumbmedia_url,
+        :custom_meta_tag,
+        :meta_tag_description,
+        :tag_list
+    ))
     @content.save
     redirect_to admin_contents_path  
   end
@@ -24,9 +36,22 @@ class Admin::ContentsController < Admin::BaseController
 
 
   def update
-    if @content.update(params.require(:content).permit(:title, :slug, :excerpt, :content, :ui_type, :hover_button_type, :menu_visibility, :thumbmedia_url, :custom_meta_tag, :meta_tag_description))
-      flash[:notice] = "Article was updated successfully."
-      redirect_to admin_contents_path
+    if @content.update(params.require(:content).permit(
+        :title,
+        :slug,
+        :excerpt,
+        :content,
+        :ui_type,
+        :hover_button_type,
+        :menu_visibility,
+        :thumbmedia_url,
+        :custom_meta_tag,
+        :meta_tag_description,
+        :tag_list
+    ))
+
+    flash[:notice] = "Article was updated successfully."
+    redirect_to admin_contents_path
 
     end
   end
