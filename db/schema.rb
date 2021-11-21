@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_21_082351) do
+ActiveRecord::Schema.define(version: 2021_11_21_144936) do
 
   create_table "admins", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 2021_11_21_082351) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "content_relationships", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "content_id"
+    t.bigint "related_content_id"
+    t.index ["content_id", "related_content_id"], name: "index_content_relationships_on_content_id_and_related_content_id", unique: true
+    t.index ["content_id"], name: "index_content_relationships_on_content_id"
+    t.index ["related_content_id"], name: "index_content_relationships_on_related_content_id"
   end
 
   create_table "contents", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -106,5 +114,6 @@ ActiveRecord::Schema.define(version: 2021_11_21_082351) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
+  add_foreign_key "content_relationships", "contents"
   add_foreign_key "taggings", "tags"
 end

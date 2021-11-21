@@ -1,4 +1,10 @@
 <div class="container">
+  <% flash.each do |type, msg| %>
+      <div class="alert alert-danger" role="alert">
+        <%= msg %>
+      </div>
+  <% end %>
+
   <button class="btn"><%= link_to "New Categories", new_admin_content_path%></td></button></a>
   <table class="table">
     <tr>
