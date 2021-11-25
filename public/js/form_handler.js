@@ -21,8 +21,17 @@ function sendData() {
 
     XHR.send( FD );
 }
+function mySubmit() {
+    document.getElementById("forml").innerHTML = "Thanks! We will get back to you soon.";
+  }
 
-
+  function validateForm() {
+    let x = document.forms["myForm"]["name"]["email"]["phone"].value;
+    if (x == "") {
+      alert("Fill all columns");
+      return false;
+    }
+  }
 /*
  XHR.onreadystatechange = function() {
  console.log("ready State " + XHR.readyState);
