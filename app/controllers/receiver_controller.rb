@@ -1,4 +1,4 @@
-class ReceiverController < ApplicationController
+class ReceiverController < BaseController
 
   skip_before_action :verify_authenticity_token
 

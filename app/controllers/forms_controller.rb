@@ -1,4 +1,4 @@
-class FormsController < ApplicationController
+class FormsController < BaseController
     before_action :set_forms, only: %i(show update destroy)
     skip_before_action :verify_authenticity_token
 

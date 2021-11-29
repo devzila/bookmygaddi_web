@@ -1,8 +1,8 @@
-class HomeController < ApplicationController
+class HomeController < BaseController
   before_action :set_category, only: %i(show)
 
   def index
-    @articles = Content.categories
+    @articles = Content.categories.active
   end
 
 

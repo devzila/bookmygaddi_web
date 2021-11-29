@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticlesController < BaseController
   before_action :set_article
 
   def show

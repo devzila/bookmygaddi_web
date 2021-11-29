@@ -1,7 +1,7 @@
 class Admin::ContentsController < Admin::BaseController
   before_action :set_category, only: %i(show edit update)
   def index
-    @contents = Content.categories
+    @categories = Content.categories.order(:title)
   end
 
   def show
@@ -67,6 +67,7 @@ class Admin::ContentsController < Admin::BaseController
         :custom_meta_tag,
         :meta_tag_description,
         :tag_list,
+        :active,
         related_content_ids: []
     )
   end

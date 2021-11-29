@@ -9,7 +9,9 @@ class Content < ApplicationRecord
   has_many :content_relationships, foreign_key: "content_id", dependent: :destroy
   has_many :related_contents, through: :content_relationships, source: :related_content
 
-  accepts_nested_attributes_for :content_relationships
+  # accepts_nested_attributes_for :content_relationships
+
+  scope :active, -> { where(active: true) }
 
 
   validates :title, :slug, :excerpt,  presence: true

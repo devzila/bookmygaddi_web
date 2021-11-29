@@ -67,6 +67,7 @@ class Admin::Category::ContentsController < Admin::BaseController
         :custom_meta_tag,
         :meta_tag_description,
         :tag_list,
+        :active,
         related_content_ids: []
     )
   end
