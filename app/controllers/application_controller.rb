@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   helper_method :get_page_meta
-  skip_before_action :verify_authenticity_token
 
   def get_page_meta
      {
