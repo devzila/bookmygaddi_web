@@ -11,7 +11,6 @@
     <script src="/js/jquery-1.9.0.min.js"></script>
 
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -23,8 +22,6 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= render "layouts/admin/footer" %>
-
-    <script src="/js/bootstrap.js"></script>
 
   </body>
 </html>
