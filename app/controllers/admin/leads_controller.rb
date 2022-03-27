@@ -1,5 +1,4 @@
 class Admin::LeadsController < Admin::BaseController
-    skip_before_action :verify_authenticity_token
     before_action :set_leads, only: %i(show update edit destroy)
 
     def index

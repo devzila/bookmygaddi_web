@@ -1,5 +1,4 @@
-class Api::LeadsController < ApplicationController 
-	skip_before_action :verify_authenticity_token
+class Api::LeadsController < ApplicationController
 
 	def create 
 		lead = Lead.new
