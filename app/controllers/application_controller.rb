@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :get_page_meta
+  protect_from_forgery with: :exception
 
   def get_page_meta
      {
